@@ -11,7 +11,7 @@ const Main = () => {
   useEffect(() => {
     axios.get(requests.requestPopular).then((res) => { setMovies(res.data.results) })
   }, [])
-  console.log(movie);
+  // console.log(movie);
 
   const truncateString = (str,num)=>{
     if(str?.length>num){
@@ -36,7 +36,7 @@ const Main = () => {
           </div>
           <p className="w-full md:max-w-[70%] lg:max-w-[50%] xl:max-w-[35%]">{truncateString(movie?.overview,150)}</p>
         </div>
-      </div>
+      </div> 
     </div>
   )
 }
